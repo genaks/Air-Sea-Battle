@@ -16,7 +16,7 @@ public class ObjectPool : MonoBehaviour
         for (int i = 0; i < numberOfObjects; i++)
         {
             newObject = Instantiate(objectToPool);
-            newObject.transform.parent = transform;
+            newObject.transform.SetParent(transform);
             newObject.SetActive(false);
             pooledObjects.Add(newObject);
         }

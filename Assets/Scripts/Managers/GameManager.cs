@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     private int defaultTimeLimit = 30;
     [SerializeField]
     private int defaultHitScore = 1;
-
+    [SerializeField]
+    private ScoreManager scoreManager;
+    [SerializeField]
+    private TimeManager timeManager;
     [SerializeField]
     private PlanesController planesController;
     [SerializeField]
@@ -37,6 +40,8 @@ public class GameManager : MonoBehaviour
     {
         gameplay.SetActive(true);
         menu.SetActive(false);
+        scoreManager.StartCountingScores(defaultHitScore);
+        timeManager.StartTimer(defaultTimeLimit);
         StartCoroutine(planesController.SpawnPlanes());
     }
 
@@ -44,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         planesController.DestroyAllPlanes();
         gun.DestroyAllBullets();
+        scoreManager.StopCountingScores();
         ShowMenu();
     }
 
@@ -58,6 +64,7 @@ public class GameManager : MonoBehaviour
         defaultHighScore = info.defaultHighScore;
         defaultTimeLimit = info.timeLimit;
         defaultHitScore = info.pointsPerPlane;
+        scoreManager.UpdateHighScore(defaultHighScore);
     }
 
 }

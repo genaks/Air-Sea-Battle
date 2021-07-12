@@ -527,6 +527,8 @@ GameObject:
   - component: {fileID: 869610154}
   - component: {fileID: 869610153}
   - component: {fileID: 869610155}
+  - component: {fileID: 869610157}
+  - component: {fileID: 869610156}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -549,6 +551,8 @@ MonoBehaviour:
   defaultHighScore: 100
   defaultTimeLimit: 30
   defaultHitScore: 1
+  scoreManager: {fileID: 869610157}
+  timeManager: {fileID: 869610156}
   planesController: {fileID: 1171941738}
   gun: {fileID: 2010044006}
   gameplay: {fileID: 1686335145}
@@ -580,6 +584,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 869610153}
+--- !u!114 &869610156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869610152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7949e6dac899c4995a282d13b67b02c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: {fileID: 1421077224}
+  gameManager: {fileID: 869610153}
+--- !u!114 &869610157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869610152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f039cf813625416d9191ce18b956f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1466246390}
+  lastScoreText: {fileID: 523938648}
+  highScoreText: {fileID: 304014616}
 --- !u!1 &871370796
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +964,7 @@ MonoBehaviour:
   maximumNumberOfPlanes: 5
   planesPool: {fileID: 1171941736}
   defaultSpawnYOffset: 20
+  scoreManager: {fileID: 869610157}
   audioSource: {fileID: 1171941737}
 --- !u!1 &1421077222
 GameObject:
@@ -1213,7 +1247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1686335146
 RectTransform:
   m_ObjectHideFlags: 0

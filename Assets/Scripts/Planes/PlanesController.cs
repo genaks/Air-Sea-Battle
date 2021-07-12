@@ -16,6 +16,8 @@ public class PlanesController : MonoBehaviour
     [SerializeField]
     private int defaultSpawnYOffset = 200;
     [SerializeField]
+    private ScoreManager scoreManager;
+    [SerializeField]
     private AudioSource audioSource;
 
 
@@ -55,6 +57,7 @@ public class PlanesController : MonoBehaviour
     public void OnBulletHit()
     {
         audioSource.Play();
+        scoreManager.OnHit();
         DestroyPlane();
     }
 
