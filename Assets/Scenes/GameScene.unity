@@ -516,6 +516,70 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &869610152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869610154}
+  - component: {fileID: 869610153}
+  - component: {fileID: 869610155}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &869610153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869610152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f729d9581196a40509d738a199f0b665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultHighScore: 100
+  defaultTimeLimit: 30
+  defaultHitScore: 1
+  planesController: {fileID: 1171941738}
+  gun: {fileID: 2010044006}
+  gameplay: {fileID: 1686335145}
+  menu: {fileID: 821269651}
+--- !u!4 &869610154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869610152}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 389.8255, y: 193.80394, z: -206.90138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869610155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869610152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50189a82824794d88907e71aaf2eff16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 869610153}
 --- !u!1 &871370796
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +930,7 @@ MonoBehaviour:
   minimumNumberOfPlanes: 3
   maximumNumberOfPlanes: 5
   planesPool: {fileID: 1171941736}
-  defaultSpawnYOffset: 200
+  defaultSpawnYOffset: 20
   audioSource: {fileID: 1171941737}
 --- !u!1 &1421077222
 GameObject:
@@ -1386,7 +1450,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1803399663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 869610153}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1803399663
 MonoBehaviour:
   m_ObjectHideFlags: 0

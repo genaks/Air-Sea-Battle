@@ -8,6 +8,8 @@ public class GameInfoFetcher : MonoBehaviour
     private const string API_URL = "http://content.gamefuel.info/api/client_programming_test/air_battle_v1/content/config/config";
 
     private bool logging = false;
+    [SerializeField]
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class GameInfoFetcher : MonoBehaviour
             {
                 string json = webRequest.downloadHandler.text;
                 GameInfo info = JsonUtility.FromJson<GameInfo>(json);
+                gameManager.UpdateDefaultValues(info);
                 Log(info);
             }
         }
