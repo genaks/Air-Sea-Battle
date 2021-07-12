@@ -1444,6 +1444,8 @@ GameObject:
   - component: {fileID: 2010044003}
   - component: {fileID: 2010044005}
   - component: {fileID: 2010044004}
+  - component: {fileID: 2010044006}
+  - component: {fileID: 2010044007}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Untagged
@@ -1507,3 +1509,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010044002}
   m_CullTransparentMesh: 0
+--- !u!114 &2010044006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010044002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c477f86826e794361b6039cd5b409336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2010044007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010044002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a206a4fb7cc664e29b18104a3a5b44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPool: {fileID: 0}
+  numberOfObjects: 0
