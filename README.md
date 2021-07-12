@@ -50,6 +50,9 @@
 
     A simple game based on Atari's classic game Air-Sea Battle
 
+I failed to understand the screeen sizes this game was to support as the instructions only mentioned an aspect ratio so the game might not perform very well on smaller screen sizes. That said - that should be a relatively small fix and should be doable if given more time. It took me roughly 4-5 hours to complete the test although I would have liked to add some extra features and a bit of polishing if I wasn't having a crazy day at work.
+
+Third party libraries used - TextMeshPro
 
 
 ### Built With
