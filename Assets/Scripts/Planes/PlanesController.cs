@@ -30,6 +30,7 @@ public class PlanesController : MonoBehaviour
     public IEnumerator SpawnPlanes()
     {
         int numberOfPlanes = Random.Range(minimumNumberOfPlanes, maximumNumberOfPlanes + 1);
+        numberOfActivePlanes = numberOfPlanes;
         for (int i = 0; i < numberOfPlanes; i++)
         {
             yield return new WaitForSeconds(1.0f);
@@ -42,7 +43,6 @@ public class PlanesController : MonoBehaviour
                 plane.SetActive(true);
             }
         }
-        numberOfActivePlanes = numberOfPlanes;
     }
 
     private Vector2 GetSpawnPositionFor(GameObject plane, int index)
@@ -64,7 +64,7 @@ public class PlanesController : MonoBehaviour
     public void DestroyPlane()
     {
         numberOfActivePlanes--;
-        if (numberOfActivePlanes == 0)
+           if (numberOfActivePlanes == 0)
         {
             StartCoroutine(SpawnPlanes());
         }
