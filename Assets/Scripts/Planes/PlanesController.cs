@@ -50,7 +50,7 @@ public class PlanesController : MonoBehaviour
         RectTransform rect = (RectTransform)plane.transform;
         float height = rect.rect.height;
 
-        Vector2 spawnPosition = new Vector2(0, Screen.height - defaultSpawnYOffset - index * height);
+        Vector2 spawnPosition = new Vector2(0, Screen.height - defaultSpawnYOffset - index * height / 2);
         return spawnPosition;
     }
 

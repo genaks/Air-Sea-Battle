@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireAngle: 60
-  speed: 100
+  speed: 200

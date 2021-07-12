@@ -46,7 +46,10 @@ public class Gun : MonoBehaviour
             if (bullet != null)
             {
                 bullet.GetComponent<Bullet>().fireAngle = rotation;
-                bullet.transform.position = transform.position;
+                Vector2 spawnPosition = transform.position;
+                spawnPosition.x -= 10;
+                spawnPosition.y -= 15;
+                bullet.transform.position = spawnPosition;
                 bullet.transform.rotation = transform.rotation;
                 bullet.SetActive(true);
             }

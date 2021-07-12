@@ -33,7 +33,7 @@ public class TimeManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         remainingTime--;
-        time.text = remainingTime.ToString();
+        time.text = "Time remaining - " + remainingTime.ToString();
         if (remainingTime == 0)
         {
             gameManager.EndGame();

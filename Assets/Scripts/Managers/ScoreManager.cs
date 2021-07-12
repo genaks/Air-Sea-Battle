@@ -30,23 +30,23 @@ public class ScoreManager : MonoBehaviour
     public void StartCountingScores(int hitScore)
     {
         score = 0;
-        scoreText.text = score.ToString();
+        scoreText.text = "Score - " + score.ToString();
         pointsPerPlane = hitScore;
     }
 
     public void OnHit()
     {
         score += pointsPerPlane;
-        scoreText.text = score.ToString();
+        scoreText.text = "Score - " + score.ToString();
     }
 
     public void StopCountingScores()
     {
-        lastScoreText.text = score.ToString();
+        lastScoreText.text = "Previous score - " + score.ToString();
         if (score > highScore)
         {
             highScore = score;
-            highScoreText.text = highScore.ToString();
+            highScoreText.text = "High score - " + highScore.ToString();
         }
         score = 0;
     }
@@ -54,6 +54,6 @@ public class ScoreManager : MonoBehaviour
     public void UpdateHighScore(int defaultHighScore)
     {
         highScore = defaultHighScore;
-        highScoreText.text = highScore.ToString();
+        highScoreText.text = "High score - " + highScore.ToString();
     }
 }
