@@ -26,6 +26,7 @@ public class TimeManager : MonoBehaviour
     public void StartTimer(int time)
     {
         remainingTime = time;
+        this.time.text = "Time remaining - " + remainingTime.ToString();
         StartCoroutine(UpdateTime());
     }
 
