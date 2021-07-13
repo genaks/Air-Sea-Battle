@@ -80,11 +80,13 @@ Unity 2019.4.18f1
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+* The default scene - "GameScene" can be found under the Scenes folder.
 * The default high score, time limit and hit score can be set on the game manager.
 * The Bullet and Plane prefabs control the speed of the respective objects and can be tweaked inside these prefabs.
 * Gun allows you to change values like the various states of the gun, the input keys that control the gun and all these values can be tweaked inside the inspector.
 * The ObjectPool component on the gun and planes GameObjects allow you to specify how many bullets and planes you wish to instantiate at the start of the game.
 * The spawn position of the planes and the number of planes can also be tweaked through the inspector by acessing the planes controller script on the Planes GameObject.
+* The test suite doesn't cover all of the code yet but is there more to give an idea of what can be tested in the game.
 
 
 <!-- ROADMAP -->
