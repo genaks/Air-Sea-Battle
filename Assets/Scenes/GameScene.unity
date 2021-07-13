@@ -970,7 +970,7 @@ MonoBehaviour:
   minimumNumberOfPlanes: 3
   maximumNumberOfPlanes: 5
   planesPool: {fileID: 1171941736}
-  defaultSpawnYOffset: 50
+  textElement: {fileID: 1466246390}
   scoreManager: {fileID: 869610157}
   audioSource: {fileID: 1171941737}
 --- !u!1 &1421077222

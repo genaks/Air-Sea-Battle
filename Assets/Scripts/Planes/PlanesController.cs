@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlanesController : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class PlanesController : MonoBehaviour
     private int numberOfActivePlanes = 0;
 
     [SerializeField]
-    private int defaultSpawnYOffset = 200;
+    private TextMeshProUGUI textElement;
+    private float defaultSpawnYOffset = 200;
     [SerializeField]
     private ScoreManager scoreManager;
     [SerializeField]
@@ -24,7 +26,8 @@ public class PlanesController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        RectTransform rect = (RectTransform)textElement.transform;
+        defaultSpawnYOffset = rect.rect.height;
     }
 
     public IEnumerator SpawnPlanes()
@@ -38,7 +41,7 @@ public class PlanesController : MonoBehaviour
             if (plane != null)
             {
                 plane.GetComponent<EnemyPlane>().controller = this;
-                plane.transform.position = GetSpawnPositionFor(plane, i);
+                plane.transform.position = GetSpawnPositionFor(plane, i + 1);
                 plane.transform.rotation = transform.rotation;
                 plane.SetActive(true);
             }
