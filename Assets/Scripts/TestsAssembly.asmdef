@@ -1,0 +1,4 @@
+﻿{
+	"name": "TestsAssembly",
+    "references": [ "Unity.TextMeshPro" ]
+}
