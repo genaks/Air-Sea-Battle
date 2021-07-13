@@ -108,7 +108,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@akshay1427](https://twitter.com/akshay1427) - email
+Your Name - [@akshay1427](https://twitter.com/akshay1427)
 
 Project Link: [Air-Sea-Battle](https://github.com/genaks/Air-Sea-Battle)
 
