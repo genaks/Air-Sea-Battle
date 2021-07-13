@@ -7,8 +7,6 @@ public class Gun : MonoBehaviour
 {
     [SerializeField]
     private int rotation;
-    [SerializeField]
-    private int maximumBullets = 5;
 
     [SerializeField]
     private Sprite defaultStateSprite;
