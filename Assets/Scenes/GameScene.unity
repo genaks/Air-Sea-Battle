@@ -600,6 +600,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: {fileID: 1421077224}
   gameManager: {fileID: 869610153}
+  defaultTimeColor: {r: 1, g: 1, b: 1, a: 0}
+  juicedTimeColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!114 &869610157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,6 +617,8 @@ MonoBehaviour:
   scoreText: {fileID: 1466246390}
   lastScoreText: {fileID: 523938648}
   highScoreText: {fileID: 304014616}
+  defaultScoreColor: {r: 1, g: 1, b: 1, a: 0}
+  juicedScoreColor: {r: 0, g: 1, b: 0, a: 0}
 --- !u!1 &871370796
 GameObject:
   m_ObjectHideFlags: 0

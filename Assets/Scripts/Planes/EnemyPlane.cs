@@ -19,7 +19,10 @@ public class EnemyPlane : MonoBehaviour
     void Update()
     {
         transform.Translate((transform.right * speed * Time.deltaTime));
-        Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
+        RectTransform rect = (RectTransform)transform;
+        float width = rect.rect.width;
+
+        Rect screenRect = new Rect(0, 0, Screen.width + width / 2, Screen.height);
         if (!screenRect.Contains(transform.position))
         {
             controller.DestroyPlane();
